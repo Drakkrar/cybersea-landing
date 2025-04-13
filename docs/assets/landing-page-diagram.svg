@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 1200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo y título general -->
+  <rect width="800" height="1200" fill="#f5f7fa" />
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c3e50">Estructura de una Landing Page Informativa</text>
+  
+  <!-- Header/Encabezado -->
+  <rect x="100" y="70" width="600" height="100" rx="5" fill="#3498db" />
+  <text x="400" y="120" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">1. Header / Encabezado</text>
+  <text x="400" y="150" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Logo, Menú de navegación, Botón CTA</text>
+  
+  <!-- Hero Section -->
+  <rect x="100" y="190" width="600" height="120" rx="5" fill="#2ecc71" />
+  <text x="400" y="230" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">2. Hero Section / Sección Principal</text>
+  <text x="400" y="260" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Título principal, Subtítulo, Imagen/Video principal, Botón CTA</text>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Propuesta de valor clara y concisa</text>
+  
+  <!-- Beneficios o características -->
+  <rect x="100" y="330" width="600" height="100" rx="5" fill="#9b59b6" />
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">3. Beneficios o Características</text>
+  <text x="400" y="400" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Iconos con beneficios clave, Descripciones breves</text>
+  
+  <!-- Información del producto/servicio -->
+  <rect x="100" y="450" width="600" height="110" rx="5" fill="#e74c3c" />
+  <text x="400" y="490" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">4. Información Detallada</text>
+  <text x="400" y="520" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Explicación del producto/servicio</text>
+  <text x="400" y="540" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Con imágenes y texto descriptivo</text>
+  
+  <!-- Testimonios -->
+  <rect x="100" y="580" width="600" height="100" rx="5" fill="#f39c12" />
+  <text x="400" y="620" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">5. Testimonios / Social Proof</text>
+  <text x="400" y="650" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Opiniones de clientes, Valoraciones, Casos de éxito</text>
+  
+  <!-- FAQ -->
+  <rect x="100" y="700" width="600" height="100" rx="5" fill="#1abc9c" />
+  <text x="400" y="740" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">6. Preguntas Frecuentes (FAQ)</text>
+  <text x="400" y="770" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Respuestas a dudas comunes de los visitantes</text>
+  
+  <!-- Llamada a la acción -->
+  <rect x="100" y="820" width="600" height="100" rx="5" fill="#d35400" />
+  <text x="400" y="860" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">7. Llamada a la Acción Principal</text>
+  <text x="400" y="890" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Formulario, Botón destacado, Incentivo para actuar</text>
+  
+  <!-- Sobre nosotros / Credibilidad -->
+  <rect x="100" y="940" width="600" height="100" rx="5" fill="#16a085" />
+  <text x="400" y="980" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">8. Sobre Nosotros / Credibilidad</text>
+  <text x="400" y="1010" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Historia breve, Logros, Certificaciones, Clientes importantes</text>
+  
+  <!-- Footer -->
+  <rect x="100" y="1060" width="600" height="100" rx="5" fill="#34495e" />
+  <text x="400" y="1100" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">9. Footer / Pie de Página</text>
+  <text x="400" y="1130" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Contacto, Enlaces legales, Redes sociales, Mapa del sitio</text>
+</svg>
