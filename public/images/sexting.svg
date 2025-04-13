@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo -->
+  <rect width="500" height="400" fill="#f8f9fa" rx="10" ry="10"/>
+
+  <!-- Dispositivo móvil a la izquierda -->
+  <rect x="80" y="100" width="150" height="220" rx="15" ry="15" fill="#4a5568" stroke="#2d3748" stroke-width="3"/>
+  <rect x="90" y="120" width="130" height="165" rx="2" ry="2" fill="#e2e8f0"/>
+
+  <!-- Botón del teléfono izquierdo -->
+  <circle cx="155" cy="300" r="8" fill="#e2e8f0" stroke="#2d3748" stroke-width="1.5"/>
+
+  <!-- Sobre con mensaje en el medio -->
+  <g transform="translate(250, 200)">
+    <path d="M-35,-30 L35,-30 L35,30 L-35,30 Z" fill="#ecc94b" stroke="#744210" stroke-width="2"/>
+    <path d="M-35,-30 L0,-10 L35,-30" fill="none" stroke="#744210" stroke-width="2"/>
+    <path d="M-35,30 L0,10 L35,30" fill="none" stroke="#744210" stroke-width="2"/>
+
+    <!-- Candado -->
+    <circle cx="0" cy="0" r="15" fill="#f6e05e" stroke="#744210" stroke-width="2"/>
+    <rect x="-5" y="-3" width="10" height="10" fill="#744210" rx="2" ry="2"/>
+    <path d="M-3,-3 L-3,-8 C-3,-12 3,-12 3,-8 L3,-3" fill="none" stroke="#744210" stroke-width="2"/>
+  </g>
+
+  <!-- Dispositivo móvil a la derecha -->
+  <rect x="270" y="100" width="150" height="220" rx="15" ry="15" fill="#4a5568" stroke="#2d3748" stroke-width="3"/>
+  <rect x="280" y="120" width="130" height="165" rx="2" ry="2" fill="#e2e8f0"/>
+
+  <!-- Botón del teléfono derecho -->
+  <circle cx="345" cy="300" r="8" fill="#e2e8f0" stroke="#2d3748" stroke-width="1.5"/>
+
+  <!-- Iconos de advertencia -->
+  <g transform="translate(155, 185)">
+    <circle cx="0" cy="0" r="25" fill="#fc8181" fill-opacity="0.4"/>
+    <text x="-15" y="7" font-family="Arial" font-size="25" fill="#742a2a">🔒</text>
+  </g>
+
+  <g transform="translate(345, 185)">
+    <circle cx="0" cy="0" r="25" fill="#fc8181" fill-opacity="0.4"/>
+    <text x="-15" y="7" font-family="Arial" font-size="25" fill="#742a2a">⚠️</text>
+  </g>
+
+  <!-- Líneas de conexión -->
+  <path d="M160,170 C200,150 300,150 340,170" stroke="#a0aec0" stroke-width="3" stroke-dasharray="5,5" fill="none"/>
+  <path d="M160,200 C200,220 300,220 340,200" stroke="#a0aec0" stroke-width="3" stroke-dasharray="5,5" fill="none"/>
+
+  <!-- Texto -->
+  <text x="250" y="350" font-family="Arial" font-size="16" font-weight="bold" fill="#2d3748" text-anchor="middle">SEXTING</text>
+  <text x="250" y="375" font-family="Arial" font-size="12" fill="#4a5568" text-anchor="middle">Compartir mensajes o imágenes íntimas puede ser riesgoso</text>
+</svg>
