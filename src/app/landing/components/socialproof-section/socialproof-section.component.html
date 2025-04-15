@@ -2,97 +2,39 @@
   <div
       class="absolute inset-0 bg-[url(/images/world-map.png)] bg-cover bg-center bg-no-repeat opacity-20 dark:opacity-50"></div>
   <div class="relative z-10">
-      <h2 class="text-center text-3xl font-semibold lg:text-4xl">What People Say</h2>
+      <h2 class="text-center text-3xl font-semibold lg:text-4xl">¿Qué opinan los profesionales sobre la aplicación?</h2>
       <div class="swiper mt-8 lg:mt-16" id="testimonial-swiper">
           <div class="swiper-wrapper">
+            @for (proof of testimonials; track $index) {
               <div class="swiper-slide">
-                  <div class="text-center">
-                      <div class="avatar">
-                          <div class="mask mask-squircle bg-base-200 size-20">
-                              <img src="images/avatar/1.jpg" alt="Avatar" />
-                          </div>
-                      </div>
-                      <div class="mt-4 flex items-center justify-center gap-1">
-                          <span
-                              class="iconify lucide--star size-5 text-orange-400"></span>
-                          <span
-                              class="iconify lucide--star size-5 text-orange-400"></span>
-                          <span
-                              class="iconify lucide--star size-5 text-orange-400"></span>
-                          <span
-                              class="iconify lucide--star size-5 text-orange-400"></span>
-                          <span
-                              class="iconify lucide--star size-5 text-orange-400"></span>
-                      </div>
-                      <p class="mt-8 inline-block max-w-[600px] text-center">
-                          daisyAI is a game-changer! James, the virtual assistant, has
-                          transformed my productivity with voice commands and personalized
-                          insights. It's like having my own custom AI assistant!
-                      </p>
-                      <p class="mt-8 text-lg font-medium">Mark Thompson</p>
-                      <p class="text-base-content/80 text-sm">
-                          (Marketing Manager at Layerway)
-                      </p>
-                  </div>
-              </div>
-              <div class="swiper-slide">
-                  <div class="text-center">
-                      <div class="avatar">
-                          <div class="mask mask-squircle bg-base-200 size-20">
-                              <img src="images/avatar/1.jpg" alt="Avatar" />
-                          </div>
-                      </div>
-                      <div class="mt-4 flex items-center justify-center gap-1">
-                          <span
-                              class="iconify lucide--star size-5 text-orange-400"></span>
-                          <span
-                              class="iconify lucide--star size-5 text-orange-400"></span>
-                          <span
-                              class="iconify lucide--star size-5 text-orange-400"></span>
-                          <span
-                              class="iconify lucide--star size-5 text-orange-400"></span>
-                          <span
-                              class="iconify lucide--star size-5 text-orange-400"></span>
-                      </div>
-                      <p class="mt-8 inline-block max-w-[600px] text-center">
-                          As a UX designer, I value the app's user-friendly interface. It
-                          integrates seamlessly with our design processes, and its natural
-                          language processing ensures smooth and intuitive interactions.
-                      </p>
-                      <p class="mt-8 text-lg font-medium">Sarah Johnson</p>
-                      <p class="text-base-content/80 text-sm">(UX Designer at MyComp)</p>
-                  </div>
-              </div>
-              <div class="swiper-slide">
-                  <div class="text-center">
-                      <div class="avatar">
-                          <div class="mask mask-squircle bg-base-200 size-20">
-                              <img src="images/avatar/1.jpg" alt="Avatar" />
-                          </div>
-                      </div>
-                      <div class="mt-4 flex items-center justify-center gap-1">
-                          <span
-                              class="iconify lucide--star size-5 text-orange-400"></span>
-                          <span
-                              class="iconify lucide--star size-5 text-orange-400"></span>
-                          <span
-                              class="iconify lucide--star size-5 text-orange-400"></span>
-                          <span
-                              class="iconify lucide--star size-5 text-orange-400"></span>
-                          <span
-                              class="iconify lucide--star size-5 text-orange-400"></span>
-                      </div>
-                      <p class="mt-8 inline-block max-w-[600px] text-center">
-                          Integrating daisyAI into our mobile app was seamless. Its
-                          cross-platform support and powerful machine learning tools make
-                          it perfect for developers. Highly recommended!
-                      </p>
-                      <p class="mt-8 text-lg font-medium">Alex Chen</p>
-                      <p class="text-base-content/80 text-sm">
-                          (Mobile Developer at Android)
-                      </p>
-                  </div>
-              </div>
+                <div class="text-center">
+                    <div class="avatar">
+                        <div class="mask mask-squircle bg-base-200 size-20">
+                            <img [src]="'images/avatar/'+ proof.img" alt="Avatar" />
+                        </div>
+                    </div>
+                    <div class="mt-4 flex items-center justify-center gap-1">
+                        <span
+                            class="iconify lucide--star size-5 text-orange-400"></span>
+                        <span
+                            class="iconify lucide--star size-5 text-orange-400"></span>
+                        <span
+                            class="iconify lucide--star size-5 text-orange-400"></span>
+                        <span
+                            class="iconify lucide--star size-5 text-orange-400"></span>
+                        <span
+                            class="iconify lucide--star size-5 text-orange-400"></span>
+                    </div>
+                    <p class="mt-8 inline-block max-w-[600px] text-center">
+                        {{ proof.text}}
+                    </p>
+                    <p class="mt-8 text-lg font-medium">{{ proof.author }}</p>
+                    <p class="text-base-content/80 text-sm">
+                        {{proof.position}}
+                    </p>
+                </div>
+            </div>
+            }
           </div>
           <div class="swiper-pagination"></div>
       </div>
