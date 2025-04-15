@@ -1,37 +1,70 @@
-<header class="navbar bg-base-100 shadow-md px-4 md:px-8">
-    <div class="navbar-start">
-        <!-- Logo -->
-        <a class="text-xl font-bold text-primary">Logo</a>
-    </div>
-    <div class="navbar-center hidden lg:flex">
-        <!-- Menú de navegación -->
-        <ul class="menu menu-horizontal gap-2">
-            <li><a>Inicio</a></li>
-            <li><a>Características</a></li>
-            <li><a>Testimonios</a></li>
-            <li><a>Preguntas</a></li>
-            <li><a>Nosotros</a></li>
-        </ul>
-    </div>
-    <div class="navbar-end">
-        <!-- CTA en header -->
-        <a class="btn btn-primary">Contactar</a>
-    </div>
-    <!-- Menú móvil -->
-    <div class="navbar-end lg:hidden">
-        <div class="dropdown dropdown-end">
-            <div tabindex="0" role="button" class="btn btn-ghost">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
+<header
+    id="layout-topbar"
+    class="data-[at-top=false]:bg-base-100/95 border-base-300 fixed inset-x-0 top-0 z-50 container bg-transparent backdrop-blur-sm transition-all data-[at-top=false]:max-sm:border-b sm:rounded-full data-[at-top=false]:sm:top-4 data-[at-top=false]:sm:px-8 data-[at-top=false]:sm:shadow"
+    #layoutTopbar
+    >
+    <div>
+        <nav class="flex items-center justify-between py-2">
+            <div class="flex items-center gap-2">
+                <label
+                    for="menu-drawer"
+                    id="menu-drawer-trigger"
+                    aria-label="open sidebar"
+                    class="btn btn-square btn-ghost btn-sm lg:hidden">
+                    <span class="iconify lucide--menu size-5"></span>
+                </label>
+
+                <!-- Navbar Brand logo -->
+                <a href="#" class="text-brand-gradient text-2xl font-semibold tracking-tighter">
+                    CyberSea
+                </a>
             </div>
-            <ul tabindex="0" class="menu dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52">
-                <li><a>Inicio</a></li>
-                <li><a>Características</a></li>
-                <li><a>Testimonios</a></li>
-                <li><a>Preguntas</a></li>
-                <li><a>Nosotros</a></li>
-            </ul>
+
+            <div class="max-lg:hidden">
+                <ul class="menu menu-horizontal gap-2 px-1">
+                    <li class="font-medium"><a href="#home">Home</a></li>
+                    <li class="font-medium"><a href="#features">Features</a></li>
+                    <li class="font-medium"><a href="#organize">Organize</a></li>
+                    <li class="font-medium"><a href="#testimonial">Testimonial</a></li>
+                    <li class="font-medium"><a href="#faq">FAQ</a></li>
+                    <li class="font-medium">
+                        <a
+                            href="https://daisyui.com/store/checkout?product=71f032e3-1a23-4b79-b74e-130ada4899f2&aff=K0XmL"
+                            target="_blank"
+                            class="btn btn-primary btn-sm">
+                            Buy Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- sm screen menu (drawer) -->
+        <div class="drawer">
+            <input id="menu-drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-side">
+                <label for="menu-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                <div class="bg-base-100 min-h-full w-60 p-5">
+                    <a href="#" class="text-brand-gradient text-2xl font-bold tracking-tighter">
+                        daisyAI
+                    </a>
+                    <ul class="menu w-full gap-2 p-0 pt-4">
+                        <li class="font-medium"><a href="#home">Home</a></li>
+                        <li class="font-medium"><a href="#features">Features</a></li>
+                        <li class="font-medium"><a href="#organize">Organize</a></li>
+                        <li class="font-medium"><a href="#testimonial">Testimonial</a></li>
+                        <li class="font-medium"><a href="#faq">FAQ</a></li>
+                        <li class="font-medium">
+                            <a
+                                href="https://daisyui.com/store/checkout?product=71f032e3-1a23-4b79-b74e-130ada4899f2&aff=K0XmL"
+                                target="_blank"
+                                class="btn btn-primary btn-sm">
+                                Buy Now
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </header>
