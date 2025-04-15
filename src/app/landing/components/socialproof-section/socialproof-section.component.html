@@ -1,91 +1,109 @@
-<section class="py-16 bg-base-100">
-  <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12">Lo que dicen nuestros clientes</h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Testimonio 1 -->
-          <div class="card bg-base-200 shadow-xl">
-              <div class="card-body">
-                  <div class="flex mb-4">
-                      <!-- Estrellas de valoración -->
-                      <div class="rating rating-md">
-                          <input type="radio" name="rating-1" class="mask mask-star-2 bg-warning" checked />
-                          <input type="radio" name="rating-1" class="mask mask-star-2 bg-warning" checked />
-                          <input type="radio" name="rating-1" class="mask mask-star-2 bg-warning" checked />
-                          <input type="radio" name="rating-1" class="mask mask-star-2 bg-warning" checked />
-                          <input type="radio" name="rating-1" class="mask mask-star-2 bg-warning" checked />
-                      </div>
-                  </div>
-                  <p class="italic">"Testimonio del cliente sobre su experiencia con el producto o servicio. Es recomendable que sea específico y detalle los beneficios obtenidos."</p>
-                  <div class="flex items-center mt-4">
+<section id="testimonial" class="relative container py-8 lg:py-16">
+  <div
+      class="absolute inset-0 bg-[url(/images/world-map.png)] bg-cover bg-center bg-no-repeat opacity-20 dark:opacity-50"></div>
+  <div class="relative z-10">
+      <h2 class="text-center text-3xl font-semibold lg:text-4xl">What People Say</h2>
+      <div class="swiper mt-8 lg:mt-16" id="testimonial-swiper">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <div class="text-center">
                       <div class="avatar">
-                          <div class="w-12 h-12 rounded-full">
-                              <img src="/api/placeholder/100/100" alt="Foto del cliente" />
+                          <div class="mask mask-squircle bg-base-200 size-20">
+                              <img src="images/avatar/1.jpg" alt="Avatar" />
                           </div>
                       </div>
-                      <div class="ml-4">
-                          <h4 class="font-bold">Nombre del Cliente</h4>
-                          <p class="text-sm">Cargo o Empresa</p>
+                      <div class="mt-4 flex items-center justify-center gap-1">
+                          <span
+                              class="iconify lucide--star size-5 text-orange-400"></span>
+                          <span
+                              class="iconify lucide--star size-5 text-orange-400"></span>
+                          <span
+                              class="iconify lucide--star size-5 text-orange-400"></span>
+                          <span
+                              class="iconify lucide--star size-5 text-orange-400"></span>
+                          <span
+                              class="iconify lucide--star size-5 text-orange-400"></span>
                       </div>
+                      <p class="mt-8 inline-block max-w-[600px] text-center">
+                          daisyAI is a game-changer! James, the virtual assistant, has
+                          transformed my productivity with voice commands and personalized
+                          insights. It's like having my own custom AI assistant!
+                      </p>
+                      <p class="mt-8 text-lg font-medium">Mark Thompson</p>
+                      <p class="text-base-content/80 text-sm">
+                          (Marketing Manager at Layerway)
+                      </p>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="text-center">
+                      <div class="avatar">
+                          <div class="mask mask-squircle bg-base-200 size-20">
+                              <img src="images/avatar/1.jpg" alt="Avatar" />
+                          </div>
+                      </div>
+                      <div class="mt-4 flex items-center justify-center gap-1">
+                          <span
+                              class="iconify lucide--star size-5 text-orange-400"></span>
+                          <span
+                              class="iconify lucide--star size-5 text-orange-400"></span>
+                          <span
+                              class="iconify lucide--star size-5 text-orange-400"></span>
+                          <span
+                              class="iconify lucide--star size-5 text-orange-400"></span>
+                          <span
+                              class="iconify lucide--star size-5 text-orange-400"></span>
+                      </div>
+                      <p class="mt-8 inline-block max-w-[600px] text-center">
+                          As a UX designer, I value the app's user-friendly interface. It
+                          integrates seamlessly with our design processes, and its natural
+                          language processing ensures smooth and intuitive interactions.
+                      </p>
+                      <p class="mt-8 text-lg font-medium">Sarah Johnson</p>
+                      <p class="text-base-content/80 text-sm">(UX Designer at MyComp)</p>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="text-center">
+                      <div class="avatar">
+                          <div class="mask mask-squircle bg-base-200 size-20">
+                              <img src="images/avatar/1.jpg" alt="Avatar" />
+                          </div>
+                      </div>
+                      <div class="mt-4 flex items-center justify-center gap-1">
+                          <span
+                              class="iconify lucide--star size-5 text-orange-400"></span>
+                          <span
+                              class="iconify lucide--star size-5 text-orange-400"></span>
+                          <span
+                              class="iconify lucide--star size-5 text-orange-400"></span>
+                          <span
+                              class="iconify lucide--star size-5 text-orange-400"></span>
+                          <span
+                              class="iconify lucide--star size-5 text-orange-400"></span>
+                      </div>
+                      <p class="mt-8 inline-block max-w-[600px] text-center">
+                          Integrating daisyAI into our mobile app was seamless. Its
+                          cross-platform support and powerful machine learning tools make
+                          it perfect for developers. Highly recommended!
+                      </p>
+                      <p class="mt-8 text-lg font-medium">Alex Chen</p>
+                      <p class="text-base-content/80 text-sm">
+                          (Mobile Developer at Android)
+                      </p>
                   </div>
               </div>
           </div>
+          <div class="swiper-pagination"></div>
+      </div>
 
-          <!-- Testimonio 2 -->
-          <div class="card bg-base-200 shadow-xl">
-              <div class="card-body">
-                  <div class="flex mb-4">
-                      <!-- Estrellas de valoración -->
-                      <div class="rating rating-md">
-                          <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning" checked />
-                          <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning" checked />
-                          <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning" checked />
-                          <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning" checked />
-                          <input type="radio" name="rating-2" class="mask mask-star-2 bg-warning" checked />
-                      </div>
-                  </div>
-                  <p class="italic">"Testimonio del cliente sobre su experiencia con el producto o servicio. Es recomendable que sea específico y detalle los beneficios obtenidos."</p>
-                  <div class="flex items-center mt-4">
-                      <div class="avatar">
-                          <div class="w-12 h-12 rounded-full">
-                              <img src="/api/placeholder/100/100" alt="Foto del cliente" />
-                          </div>
-                      </div>
-                      <div class="ml-4">
-                          <h4 class="font-bold">Nombre del Cliente</h4>
-                          <p class="text-sm">Cargo o Empresa</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-          <!-- Testimonio 3 -->
-          <div class="card bg-base-200 shadow-xl">
-              <div class="card-body">
-                  <div class="flex mb-4">
-                      <!-- Estrellas de valoración -->
-                      <div class="rating rating-md">
-                          <input type="radio" name="rating-3" class="mask mask-star-2 bg-warning" checked />
-                          <input type="radio" name="rating-3" class="mask mask-star-2 bg-warning" checked />
-                          <input type="radio" name="rating-3" class="mask mask-star-2 bg-warning" checked />
-                          <input type="radio" name="rating-3" class="mask mask-star-2 bg-warning" checked />
-                          <input type="radio" name="rating-3" class="mask mask-star-2 bg-warning" checked />
-                      </div>
-                  </div>
-                  <p class="italic">"Testimonio del cliente sobre su experiencia con el producto o servicio. Es recomendable que sea específico y detalle los beneficios obtenidos."</p>
-                  <div class="flex items-center mt-4">
-                      <div class="avatar">
-                          <div class="w-12 h-12 rounded-full">
-                              <img src="/api/placeholder/100/100" alt="Foto del cliente" />
-                          </div>
-                      </div>
-                      <div class="ml-4">
-                          <h4 class="font-bold">Nombre del Cliente</h4>
-                          <p class="text-sm">Cargo o Empresa</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
+      <div class="relative mt-8 flex items-center justify-center gap-4">
+          <button class="testimonials-button-prev btn btn-circle">
+              <span class="iconify lucide--chevron-left size-5"></span>
+          </button>
+          <button class="testimonials-button-next btn btn-circle">
+              <span class="iconify lucide--chevron-right size-5"></span>
+          </button>
       </div>
   </div>
 </section>
