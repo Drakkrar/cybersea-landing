@@ -9,5 +9,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'cybersea-landing-daisy';
+  title = 'CyberSea: Navega seguro en el océano digital | Plataforma interactiva de ciberseguridad';
 }
