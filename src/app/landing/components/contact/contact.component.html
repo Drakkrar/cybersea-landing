@@ -1,17 +1,29 @@
 <div class="max-w-md mx-auto card bg-base-100 shadow-xl">
     <div class="card-body">
         <h3 class="card-title text-secondary justify-center mb-4">Contáctanos</h3>
-        <div class="form-control mb-4 text-secondary">
-            <input type="text" placeholder="Nombre" class="input input-bordered" />
-        </div>
-        <div class="form-control mb-4 text-secondary">
-            <input type="email" placeholder="Email" class="input input-bordered" />
-        </div>
-        <div class="form-control mb-6 text-secondary">
-            <textarea class="textarea textarea-bordered" placeholder="¿Te gustaria comentar algo?"></textarea>
-        </div>
-        <div class="form-control">
-            <button class="btn btn-primary">Enviar</button>
-        </div>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-control mb-4 text-secondary">
+                <input type="text" placeholder="Nombre" class="input input-bordered" formControlName="name" 
+                       [ngClass]="{'input-error': contactForm.get('name')?.invalid && contactForm.get('name')?.touched}" />
+                <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-error text-sm mt-1">
+                    <span *ngIf="contactForm.get('name')?.errors?.['required']">El nombre es requerido.</span>
+                    <span *ngIf="contactForm.get('name')?.errors?.['minlength']">El nombre debe tener al menos 2 caracteres.</span>
+                </div>
+            </div>
+            <div class="form-control mb-4 text-secondary">
+                <input type="email" placeholder="Email" class="input input-bordered" formControlName="email"
+                       [ngClass]="{'input-error': contactForm.get('email')?.invalid && contactForm.get('email')?.touched}" />
+                <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-error text-sm mt-1">
+                    <span *ngIf="contactForm.get('email')?.errors?.['required']">El email es requerido.</span>
+                    <span *ngIf="contactForm.get('email')?.errors?.['email']">Introduce un email válido.</span>
+                </div>
+            </div>
+            <div class="form-control mb-6 text-secondary">
+                <textarea class="textarea textarea-bordered" placeholder="¿Te gustaria comentar algo?" formControlName="message"></textarea>
+            </div>
+            <div class="form-control">
+                <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Enviar</button>
+            </div>
+        </form>
     </div>
 </div>
