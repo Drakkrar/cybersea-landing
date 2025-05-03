@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, NonNullableFormBuilder } from '@angular/forms';
 import { ContactService } from '../../services/contact.service';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'landing-contact-component',
@@ -11,33 +12,26 @@ import { ContactService } from '../../services/contact.service';
   styleUrl: './contact.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactComponent implements OnInit { 
-  contactForm!: FormGroup;
+export class ContactComponent { 
+  
+  fb = inject(NonNullableFormBuilder);
+  contactService = inject(ContactService);
+  
+  contactForm = this.fb.group({
+    name: ['', [Validators.required, Validators.minLength(2)]],
+    email: ['', [Validators.required, Validators.email]],
+    message: ['']
+  });
 
-  constructor(private fb: FormBuilder, private contactService: ContactService) {}
-
-  ngOnInit(): void {
-    this.initForm()
-  }
-
-  private initForm(): void {
-    this.contactForm = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(2)]],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['']
-    });
-  }
+  formValues = toSignal(this.contactForm.valueChanges)
+  formStatus = toSignal(this.contactForm.statusChanges)
+  formErrors = toSignal(this.contactForm.statusChanges, { initialValue: 'INVALID' })
 
   onSubmit(): void {
-    if (this.contactForm.valid) {
-      this.contactService.submitContactForm(this.contactForm.value);
-      this.contactForm.reset();
-    } else {
-      // Mark all fields as touched to trigger validation errors
-      Object.keys(this.contactForm.controls).forEach(key => {
-        const control = this.contactForm.get(key);
-        control?.markAsTouched();
-      });
+    if (!this.contactForm.valid) { 
+      // TODO: Act error loggers  
     }
+
+    console.log(this.contactForm.value);
   }
 }
