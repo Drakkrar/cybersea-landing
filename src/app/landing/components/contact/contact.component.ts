@@ -33,5 +33,12 @@ export class ContactComponent {
     }
 
     console.log(this.contactForm.value);
+    this.resetForm();
+  }
+
+  resetForm(): void {
+    this.contactForm.reset();
+    this.contactForm.markAsPristine();
+    this.contactForm.markAsUntouched();
   }
 }
