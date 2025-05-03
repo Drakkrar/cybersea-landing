@@ -5,11 +5,12 @@ import { HeroSectionComponent } from "../../components/hero-section/hero-section
 import { InformationSectionComponent } from "../../components/information-section/information-section.component";
 import { BenefitsSectionComponent } from "../../components/benefits-section/benefits-section.component";
 import { SocialproofSectionComponent } from "../../components/socialproof-section/socialproof-section.component";
+import { CtaSectionComponent } from '../../components/cta-section/cta-section.component';
 
 @Component({
   selector: 'landing-main-view',
   standalone: true,
-  imports: [FooterComponent, HeaderComponent, HeroSectionComponent, InformationSectionComponent, BenefitsSectionComponent, SocialproofSectionComponent],
+  imports: [FooterComponent, HeaderComponent, HeroSectionComponent, InformationSectionComponent, BenefitsSectionComponent, SocialproofSectionComponent, CtaSectionComponent],
   templateUrl: './main-view.component.html',
   styleUrl: './main-view.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
